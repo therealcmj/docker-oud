@@ -16,5 +16,6 @@ RUN chmod a+xr /u01 && \
     su -c "/var/tmp/installer/Disk1/runInstaller -jreLoc $JAVA_HOME -ignoreSysPrereqs -novalidation -silent -responseFile /var/tmp/installer/oud.rsp -invPtrLoc /u01/oraInst.loc -waitforcompletion" - oracle && \
     rm -rf /var/tmp/installer
 
+USER oracle
 
 CMD /bin/echo "That isn't how you use this. Sorry."
