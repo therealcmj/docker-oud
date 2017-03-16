@@ -8,4 +8,7 @@ if [ ! -e $ZIPFILE ]; then
   exit -1
 fi
 
-docker build -t oracle/oud:11.1.2.3.0 .
+docker rmi oracle/oud
+
+docker build -t oracle/oud .
+docker tag oracle/oud oracle/oud:11.1.2.3.0
